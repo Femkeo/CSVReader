@@ -15,6 +15,9 @@
 		2005AB01234DD77500679AF2 /* CSVReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AB00234DD77500679AF2 /* CSVReaderTests.swift */; };
 		2005AB0C234DD77500679AF2 /* CSVReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AB0B234DD77500679AF2 /* CSVReaderUITests.swift */; };
 		2005AB1A234DD7A500679AF2 /* CSVResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AB19234DD7A500679AF2 /* CSVResultTableViewController.swift */; };
+		2005AB21234DDC3D00679AF2 /* CSVReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AB20234DDC3D00679AF2 /* CSVReader.swift */; };
+		2005AB24234DDF3B00679AF2 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2005AB23234DDF3B00679AF2 /* issues.csv */; };
+		2005AB26234DE07D00679AF2 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AB25234DE07D00679AF2 /* Issue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		2005AB0B234DD77500679AF2 /* CSVReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReaderUITests.swift; sourceTree = "<group>"; };
 		2005AB0D234DD77500679AF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2005AB19234DD7A500679AF2 /* CSVResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVResultTableViewController.swift; sourceTree = "<group>"; };
+		2005AB20234DDC3D00679AF2 /* CSVReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
+		2005AB23234DDF3B00679AF2 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = issues.csv; path = ../../../../../../../Downloads/issues.csv; sourceTree = "<group>"; };
+		2005AB25234DE07D00679AF2 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				2005AB1D234DD80A00679AF2 /* UI */,
+				2005AB27234DE08700679AF2 /* Network */,
 				2005AB1C234DD80400679AF2 /* Model */,
 				2005AB1B234DD7BC00679AF2 /* Supporting Files */,
 				2005AAEF234DD77300679AF2 /* Main.storyboard */,
@@ -129,6 +136,7 @@
 		2005AB1B234DD7BC00679AF2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2005AB22234DDF0700679AF2 /* CSVFile */,
 				2005AAE9234DD77300679AF2 /* AppDelegate.swift */,
 				2005AAEB234DD77300679AF2 /* SceneDelegate.swift */,
 				2005AAF2234DD77500679AF2 /* Assets.xcassets */,
@@ -140,6 +148,7 @@
 		2005AB1C234DD80400679AF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2005AB25234DE07D00679AF2 /* Issue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +159,22 @@
 				2005AB19234DD7A500679AF2 /* CSVResultTableViewController.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		2005AB22234DDF0700679AF2 /* CSVFile */ = {
+			isa = PBXGroup;
+			children = (
+				2005AB23234DDF3B00679AF2 /* issues.csv */,
+			);
+			path = CSVFile;
+			sourceTree = "<group>";
+		};
+		2005AB27234DE08700679AF2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2005AB20234DDC3D00679AF2 /* CSVReader.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2005AB24234DDF3B00679AF2 /* issues.csv in Resources */,
 				2005AAF6234DD77500679AF2 /* LaunchScreen.storyboard in Resources */,
 				2005AAF3234DD77500679AF2 /* Assets.xcassets in Resources */,
 				2005AAF1234DD77300679AF2 /* Main.storyboard in Resources */,
@@ -283,7 +309,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2005AB26234DE07D00679AF2 /* Issue.swift in Sources */,
 				2005AB1A234DD7A500679AF2 /* CSVResultTableViewController.swift in Sources */,
+				2005AB21234DDC3D00679AF2 /* CSVReader.swift in Sources */,
 				2005AAEA234DD77300679AF2 /* AppDelegate.swift in Sources */,
 				2005AAEC234DD77300679AF2 /* SceneDelegate.swift in Sources */,
 			);
