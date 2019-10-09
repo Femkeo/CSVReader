@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B35E4E459152121BD0130E0 /* Pods_CSVReaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7041049511A03C3CD7890FE5 /* Pods_CSVReaderTests.framework */; };
+		2000BDA3234E145600850A6B /* CSVViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2000BDA2234E145600850A6B /* CSVViewModel.swift */; };
+		2000BDA5234E1A1000850A6B /* CSVReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AB20234DDC3D00679AF2 /* CSVReader.swift */; };
 		2005AAEA234DD77300679AF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AAE9234DD77300679AF2 /* AppDelegate.swift */; };
 		2005AAEC234DD77300679AF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AAEB234DD77300679AF2 /* SceneDelegate.swift */; };
 		2005AAF1234DD77300679AF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AAEF234DD77300679AF2 /* Main.storyboard */; };
@@ -18,6 +21,8 @@
 		2005AB21234DDC3D00679AF2 /* CSVReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AB20234DDC3D00679AF2 /* CSVReader.swift */; };
 		2005AB24234DDF3B00679AF2 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2005AB23234DDF3B00679AF2 /* issues.csv */; };
 		2005AB26234DE07D00679AF2 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AB25234DE07D00679AF2 /* Issue.swift */; };
+		8F5FAB584218CCC972C18186 /* Pods_CSVReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A605EBCB158B1F37492FEC /* Pods_CSVReader.framework */; };
+		A468690F3899797D45E56144 /* Pods_CSVReaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065A3D95074D3F1F6AF0BA08 /* Pods_CSVReaderUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		035274933696A3F736785003 /* Pods-CSVReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVReader.release.xcconfig"; path = "Target Support Files/Pods-CSVReader/Pods-CSVReader.release.xcconfig"; sourceTree = "<group>"; };
+		065A3D95074D3F1F6AF0BA08 /* Pods_CSVReaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSVReaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08552CD8F7403EB04A560FFE /* Pods-CSVReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVReader.debug.xcconfig"; path = "Target Support Files/Pods-CSVReader/Pods-CSVReader.debug.xcconfig"; sourceTree = "<group>"; };
+		2000BDA2234E145600850A6B /* CSVViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVViewModel.swift; sourceTree = "<group>"; };
 		2005AAE6234DD77300679AF2 /* CSVReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSVReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2005AAE9234DD77300679AF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2005AAEB234DD77300679AF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +64,12 @@
 		2005AB20234DDC3D00679AF2 /* CSVReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
 		2005AB23234DDF3B00679AF2 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = issues.csv; path = ../../../../../../../Downloads/issues.csv; sourceTree = "<group>"; };
 		2005AB25234DE07D00679AF2 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		322FF2126DF2692EC7C7FC62 /* Pods-CSVReaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVReaderUITests.release.xcconfig"; path = "Target Support Files/Pods-CSVReaderUITests/Pods-CSVReaderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		64980C278F98E89B7EC5A843 /* Pods-CSVReaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVReaderUITests.debug.xcconfig"; path = "Target Support Files/Pods-CSVReaderUITests/Pods-CSVReaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7041049511A03C3CD7890FE5 /* Pods_CSVReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSVReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E741184F7A67AB82575D731 /* Pods-CSVReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVReaderTests.debug.xcconfig"; path = "Target Support Files/Pods-CSVReaderTests/Pods-CSVReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0A605EBCB158B1F37492FEC /* Pods_CSVReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSVReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4D8136800F8DA151D54E4A5 /* Pods-CSVReaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVReaderTests.release.xcconfig"; path = "Target Support Files/Pods-CSVReaderTests/Pods-CSVReaderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F5FAB584218CCC972C18186 /* Pods_CSVReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B35E4E459152121BD0130E0 /* Pods_CSVReaderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +93,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A468690F3899797D45E56144 /* Pods_CSVReaderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2000BDA4234E145D00850A6B /* CSVViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2000BDA2234E145600850A6B /* CSVViewModel.swift */,
+			);
+			path = CSVViewModel;
+			sourceTree = "<group>";
+		};
+		200399E4234DFBCB00B8291C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2005AAEF234DD77300679AF2 /* Main.storyboard */,
+				2005AAF4234DD77500679AF2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		2005AADD234DD77300679AF2 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +124,8 @@
 				2005AAFF234DD77500679AF2 /* CSVReaderTests */,
 				2005AB0A234DD77500679AF2 /* CSVReaderUITests */,
 				2005AAE7234DD77300679AF2 /* Products */,
+				7EE967D4B0503F71F83FF1C0 /* Pods */,
+				69655A000D67807349C14AAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,11 +143,10 @@
 			isa = PBXGroup;
 			children = (
 				2005AB1D234DD80A00679AF2 /* UI */,
-				2005AB27234DE08700679AF2 /* Network */,
+				2000BDA4234E145D00850A6B /* CSVViewModel */,
 				2005AB1C234DD80400679AF2 /* Model */,
+				2005AB27234DE08700679AF2 /* Network */,
 				2005AB1B234DD7BC00679AF2 /* Supporting Files */,
-				2005AAEF234DD77300679AF2 /* Main.storyboard */,
-				2005AAF4234DD77500679AF2 /* LaunchScreen.storyboard */,
 			);
 			path = CSVReader;
 			sourceTree = "<group>";
@@ -157,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				2005AB19234DD7A500679AF2 /* CSVResultTableViewController.swift */,
+				200399E4234DFBCB00B8291C /* Storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -177,6 +214,29 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		69655A000D67807349C14AAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0A605EBCB158B1F37492FEC /* Pods_CSVReader.framework */,
+				7041049511A03C3CD7890FE5 /* Pods_CSVReaderTests.framework */,
+				065A3D95074D3F1F6AF0BA08 /* Pods_CSVReaderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EE967D4B0503F71F83FF1C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08552CD8F7403EB04A560FFE /* Pods-CSVReader.debug.xcconfig */,
+				035274933696A3F736785003 /* Pods-CSVReader.release.xcconfig */,
+				8E741184F7A67AB82575D731 /* Pods-CSVReaderTests.debug.xcconfig */,
+				F4D8136800F8DA151D54E4A5 /* Pods-CSVReaderTests.release.xcconfig */,
+				64980C278F98E89B7EC5A843 /* Pods-CSVReaderUITests.debug.xcconfig */,
+				322FF2126DF2692EC7C7FC62 /* Pods-CSVReaderUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2005AB10234DD77500679AF2 /* Build configuration list for PBXNativeTarget "CSVReader" */;
 			buildPhases = (
+				5BBCED91B3F4A29023686F93 /* [CP] Check Pods Manifest.lock */,
 				2005AAE2234DD77300679AF2 /* Sources */,
 				2005AAE3234DD77300679AF2 /* Frameworks */,
 				2005AAE4234DD77300679AF2 /* Resources */,
+				443F079398526ACF7A87397D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2005AB13234DD77500679AF2 /* Build configuration list for PBXNativeTarget "CSVReaderTests" */;
 			buildPhases = (
+				D56BE4E9A33A8CFB6EDBFEA8 /* [CP] Check Pods Manifest.lock */,
 				2005AAF8234DD77500679AF2 /* Sources */,
 				2005AAF9234DD77500679AF2 /* Frameworks */,
 				2005AAFA234DD77500679AF2 /* Resources */,
+				0FA7C20817423F4227AAFBED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,9 +283,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2005AB16234DD77500679AF2 /* Build configuration list for PBXNativeTarget "CSVReaderUITests" */;
 			buildPhases = (
+				B107439D82202BF2958E187A /* [CP] Check Pods Manifest.lock */,
 				2005AB03234DD77500679AF2 /* Sources */,
 				2005AB04234DD77500679AF2 /* Frameworks */,
 				2005AB05234DD77500679AF2 /* Resources */,
+				D6B8CFF44CA4044BBFC77138 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,12 +370,148 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FA7C20817423F4227AAFBED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CSVReaderTests/Pods-CSVReaderTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftCSV/SwiftCSV.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCSV.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CSVReaderTests/Pods-CSVReaderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		443F079398526ACF7A87397D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CSVReader/Pods-CSVReader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftCSV/SwiftCSV.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCSV.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CSVReader/Pods-CSVReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BBCED91B3F4A29023686F93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CSVReader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B107439D82202BF2958E187A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CSVReaderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D56BE4E9A33A8CFB6EDBFEA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CSVReaderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6B8CFF44CA4044BBFC77138 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CSVReaderUITests/Pods-CSVReaderUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftCSV/SwiftCSV.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCSV.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CSVReaderUITests/Pods-CSVReaderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2005AAE2234DD77300679AF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2005AB26234DE07D00679AF2 /* Issue.swift in Sources */,
+				2000BDA3234E145600850A6B /* CSVViewModel.swift in Sources */,
 				2005AB1A234DD7A500679AF2 /* CSVResultTableViewController.swift in Sources */,
 				2005AB21234DDC3D00679AF2 /* CSVReader.swift in Sources */,
 				2005AAEA234DD77300679AF2 /* AppDelegate.swift in Sources */,
@@ -322,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2005AB01234DD77500679AF2 /* CSVReaderTests.swift in Sources */,
+				2000BDA5234E1A1000850A6B /* CSVReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +687,7 @@
 		};
 		2005AB11234DD77500679AF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08552CD8F7403EB04A560FFE /* Pods-CSVReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,6 +706,7 @@
 		};
 		2005AB12234DD77500679AF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 035274933696A3F736785003 /* Pods-CSVReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -520,6 +725,7 @@
 		};
 		2005AB14234DD77500679AF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E741184F7A67AB82575D731 /* Pods-CSVReaderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -542,6 +748,7 @@
 		};
 		2005AB15234DD77500679AF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4D8136800F8DA151D54E4A5 /* Pods-CSVReaderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -564,6 +771,7 @@
 		};
 		2005AB17234DD77500679AF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64980C278F98E89B7EC5A843 /* Pods-CSVReaderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -584,6 +792,7 @@
 		};
 		2005AB18234DD77500679AF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 322FF2126DF2692EC7C7FC62 /* Pods-CSVReaderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

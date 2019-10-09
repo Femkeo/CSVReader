@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Issue {
-    let firstName: String = ""
-    let lastName: String = ""
-    let numberOfIssues: Int = 0
-    let birthDay : Date?
+struct Issue{
+    var firstName: String = ""
+    var lastName: String = ""
+    var numberOfIssues: String = ""
+    var birthDay : String = ""
 }

@@ -1,0 +1,16 @@
+PODS:
+  - SwiftCSV (0.5.1)
+
+DEPENDENCIES:
+  - SwiftCSV
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftCSV
+
+SPEC CHECKSUMS:
+  SwiftCSV: bc6269088ad2927f93750658c85b4a09f27529a9
+
+PODFILE CHECKSUM: 1a9d33f33be1eef2bcb5e37510251b9a8367eb98
+
+COCOAPODS: 1.6.1

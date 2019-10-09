@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CSVReader' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for CSVReader
+  pod "SwiftCSV"
+
+  target 'CSVReaderTests' do
+    inherit! :search_paths
+    # Pods for testing
+  pod "SwiftCSV"
+  end
+
+  target 'CSVReaderUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  pod "SwiftCSV"
+  end
+
+end
