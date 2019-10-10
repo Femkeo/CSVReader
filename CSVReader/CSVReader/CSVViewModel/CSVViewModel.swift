@@ -14,9 +14,10 @@ protocol HandleIssuesUpdate: class {
 
 class CSVViewModel {
     let reader = CSVReader()
+    var dispatchQueue = DispatchQueue.main
     var issues = [Issue]() {
         didSet {
-            DispatchQueue.main.async {
+            self.dispatchQueue.async {
                 self.delegate?.reloadSinceIssuesIsUpdated()
             }
         }
@@ -24,8 +25,9 @@ class CSVViewModel {
 
     weak var delegate: HandleIssuesUpdate?
 
-    init(delegate: HandleIssuesUpdate) {
+    init(delegate: HandleIssuesUpdate?, dispatchQueue: DispatchQueue?) {
         self.delegate = delegate
+        self.dispatchQueue = dispatchQueue ?? DispatchQueue.main
         self.retrieveIssues()
     }
 
@@ -37,8 +39,8 @@ class CSVViewModel {
                                          lastname: row[Constants.lastNameKey],
                                          numberOfIssues: row[Constants.NumberOfIssuesKey],
                                          birthDayText: row[Constants.birthDayKey])
-                    DispatchQueue.main.async { [weak self] in
                         self?.issues.append(newIssue)
+                    dispatchQueue.async { [weak self] in
                     }
                     print(row)
                 }
