@@ -14,18 +14,18 @@ struct Issue {
     var numberOfIssues: String? = ""
     var birthDay: Date?
 
-    init(firstname: String?, lastname: String?, numberOfIssues: String?, birthDayText: String) {
+    init(firstname: String?, lastname: String?, numberOfIssues: String?, birthDayText: String?) {
         self.firstName = firstname ?? "-"
         self.lastName = lastname ?? "-"
         self.numberOfIssues = numberOfIssues ?? "-"
         self.birthDay = transformBirthday(birthdayInText: birthDayText)
     }
 
-    func transformBirthday(birthdayInText: String) -> Date? {
-        if birthdayInText.count > 0 {
+    func transformBirthday(birthdayInText: String?) -> Date? {
+        if let birthDay = birthdayInText, birthDay.count > 0 {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
-            return dateFormatter.date(from: birthdayInText)
+            return dateFormatter.date(from: birthDay)
         }
         return nil
     }

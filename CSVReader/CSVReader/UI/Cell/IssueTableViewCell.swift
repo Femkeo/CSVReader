@@ -14,25 +14,27 @@ class IssueTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var birthdayLabel: UILabel!
 
-    var issue: Issue?
+    var issue: Issue? {
+        didSet {
+            self.fillInputViews()
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        fillInputViews()
+        self.frame.size.height = 100
+    }
+
+    func fillInputViews() {
         if let firstname = issue?.firstName, let lastname = issue?.lastName {
-            self.nameLabel.text = "\(firstname) \(lastname)"
+            nameLabel.text = "\(firstname) \(lastname)"
         }
         if let amount = issue?.numberOfIssues {
-            self.issuesAmountLabel.text = amount
+            issuesAmountLabel?.text = amount
         }
         if let birthday = issue?.birthDay {
-            self.birthdayLabel.text = "\(birthday)"
+            birthdayLabel?.text = "\(birthday)"
         }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

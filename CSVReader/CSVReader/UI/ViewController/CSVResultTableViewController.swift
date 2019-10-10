@@ -8,13 +8,14 @@
 
 import UIKit
 
-class CSVResultTableViewController: UITableViewController {
+class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
 
-    let viewModel = CSVViewModel()
+    var viewModel: CSVViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.retrieveIssues()
+        viewModel = CSVViewModel(delegate: self)
+        registerIssueCell()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -22,14 +23,23 @@ class CSVResultTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.issues.count
+        return viewModel?.issues.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "IssueCell") as? IssueTableViewCell
-        cell?.issue = viewModel.issues[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IssueCell", for: indexPath) as? IssueTableViewCell
+        cell?.issue = viewModel?.issues[indexPath.row]
 
         return cell ?? UITableViewCell()
+    }
+
+    func reloadSinceIssuesIsUpdated() {
+        self.tableView.reloadData()
+    }
+
+    func registerIssueCell() {
+        let nib = UINib(nibName: "IssueTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "IssueCell")
     }
 
 }
