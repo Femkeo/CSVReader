@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Issue {
+struct Issue: Equatable {
     var firstName: String? = ""
     var lastName: String? = ""
     var numberOfIssues: String? = ""
@@ -21,18 +21,18 @@ struct Issue {
         self.birthDay = transformBirthday(birthdayInText: birthDayText)
     }
 
-    func transformBirthday(birthdayInText: String?) -> String? {
+    func transformBirthday(birthdayInText: String?) -> String {
         if let birthDay = birthdayInText, birthDay.count > 0 {
-            let dateFormatter = getInitialDateFormatter()
+            let dateFormatter = setInitialDateFormatter()
             if let birthDate = dateFormatter.date(from: birthDay) {
                 dateFormatter.dateFormat = "dd-MM-yyyy"
                 return dateFormatter.string(from: birthDate)
             }
         }
-        return nil
+        return ""
     }
-    
-    func getInitialDateFormatter() -> DateFormatter{
+
+    func setInitialDateFormatter() -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"

@@ -10,6 +10,7 @@ import Foundation
 
 protocol HandleIssuesUpdate: class {
     func reloadSinceIssuesIsUpdated()
+    func showErrorAlert(errorText: String)
 }
 
 class CSVViewModel {
@@ -22,6 +23,7 @@ class CSVViewModel {
             }
         }
     }
+    var noErrorHasOccuredYet = true
 
     weak var delegate: HandleIssuesUpdate?
 
@@ -37,14 +39,32 @@ class CSVViewModel {
                 for row in csvRows {
                     let newIssue = Issue(firstname: row[Constants.firstNameKey],
                                          lastname: row[Constants.lastNameKey],
-                                         numberOfIssues: row[Constants.NumberOfIssuesKey],
+                                         numberOfIssues: row[Constants.numberOfIssuesKey],
                                          birthDayText: row[Constants.birthDayKey])
-                        self?.issues.append(newIssue)
                     dispatchQueue.async { [weak self] in
+                        if let self = self {
+                            if self.newIssueIsNotEmpty(issue: newIssue) {
+                                self.issues.append(newIssue)
+                            } else if self.noErrorHasOccuredYet {
+                                self.delegate?.showErrorAlert(errorText:
+                                    Constants.emptyIssueErrorMessage)
+                                self.noErrorHasOccuredYet = false
+                            }
+                        }
                     }
                     print(row)
                 }
             }
         }
+    }
+
+    func newIssueIsNotEmpty(issue: Issue) -> Bool {
+        let nilIssue = Issue(firstname: nil, lastname: nil, numberOfIssues: nil, birthDayText: nil)
+        let safetyIssue = Issue(firstname: "-", lastname: "-", numberOfIssues: "-", birthDayText: "")
+        let emptyIssue = Issue(firstname: "", lastname: "", numberOfIssues: "", birthDayText: "")
+        if issue == nilIssue || issue == emptyIssue || issue == safetyIssue {
+            return false
+        }
+        return true
     }
 }
