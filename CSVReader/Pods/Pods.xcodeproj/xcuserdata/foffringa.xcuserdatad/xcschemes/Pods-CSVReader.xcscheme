@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3FF1856C8F865FFC38A0542CEBF73D6E"
+               BlueprintIdentifier = "93D85DCD3F543112B909625E7B45DFB2"
                BuildableName = "Pods_CSVReader.framework"
                BlueprintName = "Pods-CSVReader"
                ReferencedContainer = "container:Pods.xcodeproj">

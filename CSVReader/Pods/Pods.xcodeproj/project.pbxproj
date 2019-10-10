@@ -6,62 +6,88 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		CF053FD84E415013BDD8E85B34D33F48 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 22420E4CEDEDE986487A766E914EDA40 /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		0E5F5651D43D067A497A63AE589DE600 /* NamedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F087617B122BDCE8BF70E56DCB1CCB66 /* NamedView.swift */; };
-		0EBFA6951B2A6D44758158E5F8FAED69 /* SwiftCSV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EE0923DCB0A5C2747D2883B12B7837D /* SwiftCSV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		139462A836A52836E5191F19317A402D /* Pods-CSVReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 56635F4C77E86AF34171DE8A6FAFC63A /* Pods-CSVReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B0C5EF4DEEB102AB7BBA699C5969CCA /* Pods-CSVReader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DFF4E9A4D896C5E90C2C107C28FDA /* Pods-CSVReader-dummy.m */; };
-		2249C76439E36AE3389584FBC366500E /* Pods-CSVReaderTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2088D3A8C8AE40AFCEE91CDC95E155 /* Pods-CSVReaderTests-dummy.m */; };
-		2896A6BFE1C1816F2D8F1D2FCAF17132 /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DEE5386C4061D93F6A589EA173D0E9 /* String+Lines.swift */; };
+		1364AE8C2F9F6FFF05E1183E775C783D /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD9645837E7509C67850E5574CB2F9C /* Description.swift */; };
+		1D24FA902BF4494C3953059F96FB400A /* EnumeratedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B016A82B682B0AC36A0F1A2FB6B5E /* EnumeratedView.swift */; };
 		2D371FDECF111B0EF826D3B7042A10FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		377F596CEB3D261BAEDC60D353064D9C /* Pods-CSVReaderUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B25439D21D639CA37677036A27C7CF /* Pods-CSVReaderUITests-dummy.m */; };
-		3C3DBBC506A78754975D9C5E3483D3B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		48382E2D2416D2B81E3E6751DCB90A96 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC975181679E1D5A72E1895054AA105 /* CSV.swift */; };
-		5DB8BA29146A832DFD67D90C92498B8B /* SwiftCSV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E50B32CD0A6B45893C66E8D841B86D6D /* SwiftCSV-dummy.m */; };
-		66A1CD076906808CCC68DE5BEE40FF92 /* Pods-CSVReaderTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C57D1354B736A8C4F0E722D55AF9CFC6 /* Pods-CSVReaderTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		508D99CE5208364CBF971CA1BFF5DC5C /* Pods-CSVReader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DFF4E9A4D896C5E90C2C107C28FDA /* Pods-CSVReader-dummy.m */; };
+		51AC367A14EBB927E30348E54B7B294F /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC3FA18320A46C61FF0A326080FE1D /* String+Lines.swift */; };
+		51CFC58ACB3621CE0BA59ABBD6809CD1 /* ParsingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FCAB980C2E460841420D7D0B04A450 /* ParsingState.swift */; };
+		58F53BB136BB85F0F99D648CCD19D5F8 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408A6A492B816252BF817ACF9798054C /* Parser.swift */; };
+		5D4A77A3BB2598A557E4B2F8EEDE6529 /* NamedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BECB3DA365EDCC01C153476E742019 /* NamedView.swift */; };
+		5D7C4E62DC48EC4AA69D8900BB62529F /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349932A13FFC4F54D560F7157473EFC8 /* CSV.swift */; };
+		609F54494BC4D437705BD7CA611EAF7E /* Pods-CSVReaderTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C57D1354B736A8C4F0E722D55AF9CFC6 /* Pods-CSVReaderTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		710ADAB305E3AB4EA47404DA35DC82B3 /* Pods-CSVReaderUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 592458014476FFBF9043D7B354DDDA57 /* Pods-CSVReaderUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F6739A075ABA0A16FD1612DF804EFEE /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B27FA4B8CAB1DBF7049AD70F51D3D7 /* Parser.swift */; };
-		9289F4D144C8CAB22ADDC7B6C7AAA59F /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8418B99F74DA4183FB5C8C56AF422D /* Description.swift */; };
-		96604BB927E94344DB8C34DE18DB218D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		9DA79A4D05A7B425AA8791F468C59E1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		D27ADD90203DED09606B07DA9703BDA6 /* EnumeratedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B0EACB18595BEE88664625676B139A /* EnumeratedView.swift */; };
-		DB54A6A817CB2361A1E4AE47FF787541 /* ParsingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F1F2F0FEB0EBCD0B90B346545C1FEE /* ParsingState.swift */; };
+		73E0E05D07293262928EED17D068E364 /* Pods-CSVReaderTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2088D3A8C8AE40AFCEE91CDC95E155 /* Pods-CSVReaderTests-dummy.m */; };
+		9A548879BA531CC143A22BCB39E7E488 /* SwiftCSV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 756DE680E74D47818208FE7436F87267 /* SwiftCSV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A72C2C7FCDD3E78016D63490BB1641F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A90DD5F07B4D46AFB5A3BC7127E0798E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A9569E3F31E4F234ACB9E916DA981D96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		BF2ABCD59F3080171E115B26711C5F1D /* SwiftCSV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C41AFD25B77F38AD962BF6BB478A03B6 /* SwiftCSV-dummy.m */; };
+		C900F59EC20921F488760BAD059F31F9 /* Pods-CSVReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 56635F4C77E86AF34171DE8A6FAFC63A /* Pods-CSVReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		19117277B49F902BEFE9ECBD70C26C76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93D85DCD3F543112B909625E7B45DFB2;
+			remoteInfo = "Pods-CSVReader";
+		};
+		420A6B2A059731E62DD54F2A1929E5FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0782F6A214776B02FFD12D054A1F352;
+			remoteInfo = SwiftCSV;
+		};
+		5754F838A0DCD03FFC304A861F830B48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF053FD84E415013BDD8E85B34D33F48;
+			remoteInfo = SwiftLint;
+		};
 		601E3759A9504479A8D44174F3CEBECC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3FF1856C8F865FFC38A0542CEBF73D6E;
+			remoteGlobalIDString = 93D85DCD3F543112B909625E7B45DFB2;
 			remoteInfo = "Pods-CSVReader";
 		};
-		6DAA8187A204007730C3D8B22E54CB98 /* PBXContainerItemProxy */ = {
+		B0E8464F423EFE8413588CC09B71570D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0766D04BC61B2D24B551A21AAEFB05A2;
+			remoteGlobalIDString = A0782F6A214776B02FFD12D054A1F352;
 			remoteInfo = SwiftCSV;
 		};
-		965FE1055ED1785E9F7379F62F187A6D /* PBXContainerItemProxy */ = {
+		D5F098F065E5F089BD70DFD0DD42A246 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0766D04BC61B2D24B551A21AAEFB05A2;
-			remoteInfo = SwiftCSV;
-		};
-		AE79D6AAC6CE7A421DE9380F346C850E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3FF1856C8F865FFC38A0542CEBF73D6E;
-			remoteInfo = "Pods-CSVReader";
+			remoteGlobalIDString = CF053FD84E415013BDD8E85B34D33F48;
+			remoteInfo = SwiftLint;
 		};
 		EE3ACFA38A0B52FB047D464C8B2E2336 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0766D04BC61B2D24B551A21AAEFB05A2;
+			remoteGlobalIDString = A0782F6A214776B02FFD12D054A1F352;
 			remoteInfo = SwiftCSV;
 		};
 /* End PBXContainerItemProxy section */
@@ -70,48 +96,49 @@
 		0446ADB8E1BECA684AA29C4666FBD4DD /* Pods-CSVReader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSVReader-Info.plist"; sourceTree = "<group>"; };
 		08833120FBE6D65F525576031099BB6A /* Pods-CSVReaderUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CSVReaderUITests-frameworks.sh"; sourceTree = "<group>"; };
 		0B00F431E93E5BAED686AA465B86D9AF /* Pods-CSVReaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSVReaderTests.release.xcconfig"; sourceTree = "<group>"; };
-		13C945063512B5CCB5D6C65932A46587 /* SwiftCSV-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftCSV-Info.plist"; sourceTree = "<group>"; };
 		15FBF12342315BB0BFD2A78C0E6DEA35 /* Pods-CSVReaderUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CSVReaderUITests.modulemap"; sourceTree = "<group>"; };
+		16FE6A9963179B682E836F1BCCF007F6 /* SwiftCSV-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCSV-prefix.pch"; sourceTree = "<group>"; };
 		18EF617B681FEE796659F803D1F6DB6D /* Pods-CSVReaderUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CSVReaderUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1F24ABBC22DD0417D2F61D5B335D898F /* Pods-CSVReaderTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSVReaderTests-Info.plist"; sourceTree = "<group>"; };
 		2D9CA28B80A989A84D2019DD486F03C8 /* Pods-CSVReaderTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CSVReaderTests-frameworks.sh"; sourceTree = "<group>"; };
 		30F5121A2F8204070A35ADBE0ACBD718 /* Pods-CSVReaderUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSVReaderUITests-Info.plist"; sourceTree = "<group>"; };
+		31BECB3DA365EDCC01C153476E742019 /* NamedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NamedView.swift; path = SwiftCSV/NamedView.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		349932A13FFC4F54D560F7157473EFC8 /* CSV.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSV.swift; path = SwiftCSV/CSV.swift; sourceTree = "<group>"; };
 		39D9287FA6133AC4AE3C0F6048F987C4 /* Pods-CSVReader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CSVReader.modulemap"; sourceTree = "<group>"; };
-		3EE0923DCB0A5C2747D2883B12B7837D /* SwiftCSV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCSV-umbrella.h"; sourceTree = "<group>"; };
+		3BFD665B6E866853B2751DEF50EC47B4 /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
 		3FEDB879BFE44E2B7E925A433C338C09 /* SwiftCSV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftCSV.framework; path = SwiftCSV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		408A6A492B816252BF817ACF9798054C /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = SwiftCSV/Parser.swift; sourceTree = "<group>"; };
 		47A671761A03F955CF5030860A28A116 /* Pods-CSVReaderTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CSVReaderTests.modulemap"; sourceTree = "<group>"; };
 		508643692E399BCF6A2EEF03F3065A7F /* Pods-CSVReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSVReader.debug.xcconfig"; sourceTree = "<group>"; };
 		56635F4C77E86AF34171DE8A6FAFC63A /* Pods-CSVReader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CSVReader-umbrella.h"; sourceTree = "<group>"; };
 		592458014476FFBF9043D7B354DDDA57 /* Pods-CSVReaderUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CSVReaderUITests-umbrella.h"; sourceTree = "<group>"; };
+		5ECC3FA18320A46C61FF0A326080FE1D /* String+Lines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Lines.swift"; path = "SwiftCSV/String+Lines.swift"; sourceTree = "<group>"; };
 		6A2088D3A8C8AE40AFCEE91CDC95E155 /* Pods-CSVReaderTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CSVReaderTests-dummy.m"; sourceTree = "<group>"; };
-		6EC975181679E1D5A72E1895054AA105 /* CSV.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSV.swift; path = SwiftCSV/CSV.swift; sourceTree = "<group>"; };
-		70DEE5386C4061D93F6A589EA173D0E9 /* String+Lines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Lines.swift"; path = "SwiftCSV/String+Lines.swift"; sourceTree = "<group>"; };
+		72C729F50F1898301A12D3BD60B9E31C /* SwiftCSV.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCSV.xcconfig; sourceTree = "<group>"; };
 		73E3680996600B5188304C956CE415BE /* Pods_CSVReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CSVReader.framework; path = "Pods-CSVReader.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		782F779EA550FF054C6B38FA8444CD5F /* SwiftCSV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftCSV.modulemap; sourceTree = "<group>"; };
+		756DE680E74D47818208FE7436F87267 /* SwiftCSV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCSV-umbrella.h"; sourceTree = "<group>"; };
+		7DD3872C4D1A13C8E9E15C0AA7F1311A /* SwiftCSV-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftCSV-Info.plist"; sourceTree = "<group>"; };
 		7E8DFF4E9A4D896C5E90C2C107C28FDA /* Pods-CSVReader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CSVReader-dummy.m"; sourceTree = "<group>"; };
-		83F1F2F0FEB0EBCD0B90B346545C1FEE /* ParsingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParsingState.swift; path = SwiftCSV/ParsingState.swift; sourceTree = "<group>"; };
 		952EA8920CADE9ABA5C7D56645629FFD /* Pods-CSVReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSVReader.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A33B1F1C1C7989B3C8F32B93EE84A86F /* Pods-CSVReaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSVReaderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AD5428E080EC86C6C134712ED179349C /* Pods-CSVReader-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CSVReader-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B15E00DF4CDF55EFD9E4991E2A800239 /* Pods_CSVReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CSVReaderTests.framework; path = "Pods-CSVReaderTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B34DDDA8A2A74974D0B75F703E393956 /* Pods-CSVReader-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSVReader-acknowledgements.plist"; sourceTree = "<group>"; };
-		B6B0EACB18595BEE88664625676B139A /* EnumeratedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumeratedView.swift; path = SwiftCSV/EnumeratedView.swift; sourceTree = "<group>"; };
-		BD8418B99F74DA4183FB5C8C56AF422D /* Description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Description.swift; path = SwiftCSV/Description.swift; sourceTree = "<group>"; };
-		C2445CC976B450B5F8A4F3F16670D1DD /* SwiftCSV.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCSV.xcconfig; sourceTree = "<group>"; };
+		C41AFD25B77F38AD962BF6BB478A03B6 /* SwiftCSV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftCSV-dummy.m"; sourceTree = "<group>"; };
 		C57D1354B736A8C4F0E722D55AF9CFC6 /* Pods-CSVReaderTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CSVReaderTests-umbrella.h"; sourceTree = "<group>"; };
 		C5B25439D21D639CA37677036A27C7CF /* Pods-CSVReaderUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CSVReaderUITests-dummy.m"; sourceTree = "<group>"; };
-		C6B27FA4B8CAB1DBF7049AD70F51D3D7 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = SwiftCSV/Parser.swift; sourceTree = "<group>"; };
+		CDD9645837E7509C67850E5574CB2F9C /* Description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Description.swift; path = SwiftCSV/Description.swift; sourceTree = "<group>"; };
 		CEA5C1288295D2CF3D51B4953A1514B8 /* Pods-CSVReaderTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CSVReaderTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D2DF8FD2EF389452BF9A6A4AEAE91F0B /* Pods_CSVReaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CSVReaderUITests.framework; path = "Pods-CSVReaderUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D356B0728E386530B279C076FD56C53F /* Pods-CSVReader-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CSVReader-frameworks.sh"; sourceTree = "<group>"; };
+		D90B016A82B682B0AC36A0F1A2FB6B5E /* EnumeratedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumeratedView.swift; path = SwiftCSV/EnumeratedView.swift; sourceTree = "<group>"; };
 		DA3220C43589917B996A350F4A6B0C60 /* Pods-CSVReaderUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSVReaderUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E50B32CD0A6B45893C66E8D841B86D6D /* SwiftCSV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftCSV-dummy.m"; sourceTree = "<group>"; };
+		E13DE0FDF5D1BFD02CF9E3BDA13987E1 /* SwiftCSV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftCSV.modulemap; sourceTree = "<group>"; };
 		E571513A1E1CD28B52BD6A528734CEEF /* Pods-CSVReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSVReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6FCAB980C2E460841420D7D0B04A450 /* ParsingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParsingState.swift; path = SwiftCSV/ParsingState.swift; sourceTree = "<group>"; };
 		E92A3CA6F3B7DDE2C8389096794CB3A5 /* Pods-CSVReaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSVReaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F087617B122BDCE8BF70E56DCB1CCB66 /* NamedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NamedView.swift; path = SwiftCSV/NamedView.swift; sourceTree = "<group>"; };
-		F2434EEC397478A4B1DE2F3D35CA79E5 /* SwiftCSV-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCSV-prefix.pch"; sourceTree = "<group>"; };
 		FD6DAC2E8F47692BCE46300B612C51D2 /* Pods-CSVReaderTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSVReaderTests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,33 +151,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28758507478829D76CDD8C3ABF34046F /* Frameworks */ = {
+		2FCFD6144E529478C2D34F281F94E465 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96604BB927E94344DB8C34DE18DB218D /* Foundation.framework in Frameworks */,
+				A72C2C7FCDD3E78016D63490BB1641F2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		44392953AF67D81FFF03FBEF73A3FA6D /* Frameworks */ = {
+		4EBC6B5B042CC85083427B9340AF0674 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C3DBBC506A78754975D9C5E3483D3B1 /* Foundation.framework in Frameworks */,
+				A90DD5F07B4D46AFB5A3BC7127E0798E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5760525BC26A0BF3CD1B0FD9F8D150B6 /* Frameworks */ = {
+		5136D0763A90939D61AA5B856AF8A221 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA79A4D05A7B425AA8791F468C59E1C /* Foundation.framework in Frameworks */,
+				A9569E3F31E4F234ACB9E916DA981D96 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		194207BDBFB6E7944C9C76579994117E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E13DE0FDF5D1BFD02CF9E3BDA13987E1 /* SwiftCSV.modulemap */,
+				72C729F50F1898301A12D3BD60B9E31C /* SwiftCSV.xcconfig */,
+				C41AFD25B77F38AD962BF6BB478A03B6 /* SwiftCSV-dummy.m */,
+				7DD3872C4D1A13C8E9E15C0AA7F1311A /* SwiftCSV-Info.plist */,
+				16FE6A9963179B682E836F1BCCF007F6 /* SwiftCSV-prefix.pch */,
+				756DE680E74D47818208FE7436F87267 /* SwiftCSV-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftCSV";
+			sourceTree = "<group>";
+		};
+		4DD324ED7EB73ECD9138BBD27E704AD8 /* SwiftCSV */ = {
+			isa = PBXGroup;
+			children = (
+				349932A13FFC4F54D560F7157473EFC8 /* CSV.swift */,
+				CDD9645837E7509C67850E5574CB2F9C /* Description.swift */,
+				D90B016A82B682B0AC36A0F1A2FB6B5E /* EnumeratedView.swift */,
+				31BECB3DA365EDCC01C153476E742019 /* NamedView.swift */,
+				408A6A492B816252BF817ACF9798054C /* Parser.swift */,
+				E6FCAB980C2E460841420D7D0B04A450 /* ParsingState.swift */,
+				5ECC3FA18320A46C61FF0A326080FE1D /* String+Lines.swift */,
+				194207BDBFB6E7944C9C76579994117E /* Support Files */,
+			);
+			name = SwiftCSV;
+			path = SwiftCSV;
+			sourceTree = "<group>";
+		};
 		6D753FB56A5A2A9C4CA2B98B4D1E6E5F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,42 +235,13 @@
 			path = "Target Support Files/Pods-CSVReaderUITests";
 			sourceTree = "<group>";
 		};
-		7CB4D4DE785B19188C1DB656AF8A000B /* Pods */ = {
+		9C374656E4391125AE1456ED7C134267 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9587C34065F055C222A7F7667A74CFBA /* SwiftCSV */,
+				4DD324ED7EB73ECD9138BBD27E704AD8 /* SwiftCSV */,
+				EA9B1667974A9B1A1597114A033950CB /* SwiftLint */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		832B02A886DB472D20A12EFF42F974AC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				782F779EA550FF054C6B38FA8444CD5F /* SwiftCSV.modulemap */,
-				C2445CC976B450B5F8A4F3F16670D1DD /* SwiftCSV.xcconfig */,
-				E50B32CD0A6B45893C66E8D841B86D6D /* SwiftCSV-dummy.m */,
-				13C945063512B5CCB5D6C65932A46587 /* SwiftCSV-Info.plist */,
-				F2434EEC397478A4B1DE2F3D35CA79E5 /* SwiftCSV-prefix.pch */,
-				3EE0923DCB0A5C2747D2883B12B7837D /* SwiftCSV-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftCSV";
-			sourceTree = "<group>";
-		};
-		9587C34065F055C222A7F7667A74CFBA /* SwiftCSV */ = {
-			isa = PBXGroup;
-			children = (
-				6EC975181679E1D5A72E1895054AA105 /* CSV.swift */,
-				BD8418B99F74DA4183FB5C8C56AF422D /* Description.swift */,
-				B6B0EACB18595BEE88664625676B139A /* EnumeratedView.swift */,
-				F087617B122BDCE8BF70E56DCB1CCB66 /* NamedView.swift */,
-				C6B27FA4B8CAB1DBF7049AD70F51D3D7 /* Parser.swift */,
-				83F1F2F0FEB0EBCD0B90B346545C1FEE /* ParsingState.swift */,
-				70DEE5386C4061D93F6A589EA173D0E9 /* String+Lines.swift */,
-				832B02A886DB472D20A12EFF42F974AC /* Support Files */,
-			);
-			name = SwiftCSV;
-			path = SwiftCSV;
 			sourceTree = "<group>";
 		};
 		A40017F084C762B20ED3611EB934B189 /* Pods-CSVReader */ = {
@@ -269,12 +297,21 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		CE9D90F33F0B58B34496C233C29871D7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BFD665B6E866853B2751DEF50EC47B4 /* SwiftLint.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				7CB4D4DE785B19188C1DB656AF8A000B /* Pods */,
+				9C374656E4391125AE1456ED7C134267 /* Pods */,
 				B9FFF3A54B53CEC8D68F81363AE7D44D /* Products */,
 				6D753FB56A5A2A9C4CA2B98B4D1E6E5F /* Targets Support Files */,
 			);
@@ -288,22 +325,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA9B1667974A9B1A1597114A033950CB /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D90F33F0B58B34496C233C29871D7 /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1BC902678D4D7AE7A63C6002831A7702 /* Headers */ = {
+		2120F302E26A9DB33A326CDACBC5D2F0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EBFA6951B2A6D44758158E5F8FAED69 /* SwiftCSV-umbrella.h in Headers */,
+				C900F59EC20921F488760BAD059F31F9 /* Pods-CSVReader-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3230768F1CA746E3E73155FBBEE93A0C /* Headers */ = {
+		21E87C495184237067A3F2C527F3003A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66A1CD076906808CCC68DE5BEE40FF92 /* Pods-CSVReaderTests-umbrella.h in Headers */,
+				609F54494BC4D437705BD7CA611EAF7E /* Pods-CSVReaderTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,54 +361,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F56CEFDA5701275E8A427D8F348660B5 /* Headers */ = {
+		D43AE19FD2B99D7182FD4DD1A6A26BC4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				139462A836A52836E5191F19317A402D /* Pods-CSVReader-umbrella.h in Headers */,
+				9A548879BA531CC143A22BCB39E7E488 /* SwiftCSV-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0766D04BC61B2D24B551A21AAEFB05A2 /* SwiftCSV */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7082A437B09DF539000D4019DB9426D4 /* Build configuration list for PBXNativeTarget "SwiftCSV" */;
-			buildPhases = (
-				1BC902678D4D7AE7A63C6002831A7702 /* Headers */,
-				A3786B90E25BC46EC90DDE2D9590F4D5 /* Sources */,
-				5760525BC26A0BF3CD1B0FD9F8D150B6 /* Frameworks */,
-				5ADD65FBBA6F885DC296B4501E76564F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftCSV;
-			productName = SwiftCSV;
-			productReference = 3FEDB879BFE44E2B7E925A433C338C09 /* SwiftCSV.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		3FF1856C8F865FFC38A0542CEBF73D6E /* Pods-CSVReader */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 36600AF05924AC5E535A00A4002C8921 /* Build configuration list for PBXNativeTarget "Pods-CSVReader" */;
-			buildPhases = (
-				F56CEFDA5701275E8A427D8F348660B5 /* Headers */,
-				4DEA1135A116E0BD55969A5B8FADA4CB /* Sources */,
-				44392953AF67D81FFF03FBEF73A3FA6D /* Frameworks */,
-				6D90F6996F12C692198B5B7AFAEACC24 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3A538A856092533CA7F5A08F2D3B5255 /* PBXTargetDependency */,
-			);
-			name = "Pods-CSVReader";
-			productName = "Pods-CSVReader";
-			productReference = 73E3680996600B5188304C956CE415BE /* Pods_CSVReader.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		74A61D1B15598460C6540E7F6AE0C021 /* Pods-CSVReaderUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40884AA95486C1D9879F936BC7926769 /* Build configuration list for PBXNativeTarget "Pods-CSVReaderUITests" */;
@@ -383,20 +392,59 @@
 			productReference = D2DF8FD2EF389452BF9A6A4AEAE91F0B /* Pods_CSVReaderUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AE85BE0BDFEED6B70A01CF81E0D7F280 /* Pods-CSVReaderTests */ = {
+		93D85DCD3F543112B909625E7B45DFB2 /* Pods-CSVReader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9F69A6465FAF34789C152B09315ACEB /* Build configuration list for PBXNativeTarget "Pods-CSVReaderTests" */;
+			buildConfigurationList = 82B59E9834F56FD7F51392FFC27B0624 /* Build configuration list for PBXNativeTarget "Pods-CSVReader" */;
 			buildPhases = (
-				3230768F1CA746E3E73155FBBEE93A0C /* Headers */,
-				E0FA16B300CEF719C6911BE711191AF1 /* Sources */,
-				28758507478829D76CDD8C3ABF34046F /* Frameworks */,
-				0B32E99404015939340AC44A251BC73E /* Resources */,
+				2120F302E26A9DB33A326CDACBC5D2F0 /* Headers */,
+				BBD87BC7403A0288FBEC02886BDF67F9 /* Sources */,
+				2FCFD6144E529478C2D34F281F94E465 /* Frameworks */,
+				3DA68796057194A5BB4FA21DFC4BEC46 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F66961283DDE9D4EDC9B8A370CD1A9CB /* PBXTargetDependency */,
-				C87FC7F26DE27A65B4FCEA086FBF1F08 /* PBXTargetDependency */,
+				FF2AFAD86C591EC349F9D764BFE714F4 /* PBXTargetDependency */,
+				7E255AC45EED0820F3C63EB58F98D1CA /* PBXTargetDependency */,
+			);
+			name = "Pods-CSVReader";
+			productName = "Pods-CSVReader";
+			productReference = 73E3680996600B5188304C956CE415BE /* Pods_CSVReader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A0782F6A214776B02FFD12D054A1F352 /* SwiftCSV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1915E94E19A0BDC9809FE018C425E19E /* Build configuration list for PBXNativeTarget "SwiftCSV" */;
+			buildPhases = (
+				D43AE19FD2B99D7182FD4DD1A6A26BC4 /* Headers */,
+				D3CE683BE6852C335836C311E98A4A58 /* Sources */,
+				4EBC6B5B042CC85083427B9340AF0674 /* Frameworks */,
+				F039D478A612A842EE11985E09102B07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftCSV;
+			productName = SwiftCSV;
+			productReference = 3FEDB879BFE44E2B7E925A433C338C09 /* SwiftCSV.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AD2892C2E7760D22E2FE54C8B6814C7D /* Pods-CSVReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4902A75A1368997B7BBD2E5CF36D79A2 /* Build configuration list for PBXNativeTarget "Pods-CSVReaderTests" */;
+			buildPhases = (
+				21E87C495184237067A3F2C527F3003A /* Headers */,
+				711597991F99D81114882BA31750DCB6 /* Sources */,
+				5136D0763A90939D61AA5B856AF8A221 /* Frameworks */,
+				A1C86EB7A498ABEA289BE1D4B4195118 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4E8423B93AFD72803E3F65C97A70969 /* PBXTargetDependency */,
+				6CF53EFB61B84AD884370C860AF8A595 /* PBXTargetDependency */,
+				36B6AC00AC58DD38B050FD79C47F68AA /* PBXTargetDependency */,
 			);
 			name = "Pods-CSVReaderTests";
 			productName = "Pods-CSVReaderTests";
@@ -424,30 +472,17 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3FF1856C8F865FFC38A0542CEBF73D6E /* Pods-CSVReader */,
-				AE85BE0BDFEED6B70A01CF81E0D7F280 /* Pods-CSVReaderTests */,
+				93D85DCD3F543112B909625E7B45DFB2 /* Pods-CSVReader */,
+				AD2892C2E7760D22E2FE54C8B6814C7D /* Pods-CSVReaderTests */,
 				74A61D1B15598460C6540E7F6AE0C021 /* Pods-CSVReaderUITests */,
-				0766D04BC61B2D24B551A21AAEFB05A2 /* SwiftCSV */,
+				A0782F6A214776B02FFD12D054A1F352 /* SwiftCSV */,
+				CF053FD84E415013BDD8E85B34D33F48 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0B32E99404015939340AC44A251BC73E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5ADD65FBBA6F885DC296B4501E76564F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6D90F6996F12C692198B5B7AFAEACC24 /* Resources */ = {
+		3DA68796057194A5BB4FA21DFC4BEC46 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -461,29 +496,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		4DEA1135A116E0BD55969A5B8FADA4CB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		A1C86EB7A498ABEA289BE1D4B4195118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B0C5EF4DEEB102AB7BBA699C5969CCA /* Pods-CSVReader-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3786B90E25BC46EC90DDE2D9590F4D5 /* Sources */ = {
+		F039D478A612A842EE11985E09102B07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		711597991F99D81114882BA31750DCB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48382E2D2416D2B81E3E6751DCB90A96 /* CSV.swift in Sources */,
-				9289F4D144C8CAB22ADDC7B6C7AAA59F /* Description.swift in Sources */,
-				D27ADD90203DED09606B07DA9703BDA6 /* EnumeratedView.swift in Sources */,
-				0E5F5651D43D067A497A63AE589DE600 /* NamedView.swift in Sources */,
-				7F6739A075ABA0A16FD1612DF804EFEE /* Parser.swift in Sources */,
-				DB54A6A817CB2361A1E4AE47FF787541 /* ParsingState.swift in Sources */,
-				2896A6BFE1C1816F2D8F1D2FCAF17132 /* String+Lines.swift in Sources */,
-				5DB8BA29146A832DFD67D90C92498B8B /* SwiftCSV-dummy.m in Sources */,
+				73E0E05D07293262928EED17D068E364 /* Pods-CSVReaderTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,46 +529,73 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0FA16B300CEF719C6911BE711191AF1 /* Sources */ = {
+		BBD87BC7403A0288FBEC02886BDF67F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2249C76439E36AE3389584FBC366500E /* Pods-CSVReaderTests-dummy.m in Sources */,
+				508D99CE5208364CBF971CA1BFF5DC5C /* Pods-CSVReader-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3CE683BE6852C335836C311E98A4A58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D7C4E62DC48EC4AA69D8900BB62529F /* CSV.swift in Sources */,
+				1364AE8C2F9F6FFF05E1183E775C783D /* Description.swift in Sources */,
+				1D24FA902BF4494C3953059F96FB400A /* EnumeratedView.swift in Sources */,
+				5D4A77A3BB2598A557E4B2F8EEDE6529 /* NamedView.swift in Sources */,
+				58F53BB136BB85F0F99D648CCD19D5F8 /* Parser.swift in Sources */,
+				51CFC58ACB3621CE0BA59ABBD6809CD1 /* ParsingState.swift in Sources */,
+				51AC367A14EBB927E30348E54B7B294F /* String+Lines.swift in Sources */,
+				BF2ABCD59F3080171E115B26711C5F1D /* SwiftCSV-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3A538A856092533CA7F5A08F2D3B5255 /* PBXTargetDependency */ = {
+		36B6AC00AC58DD38B050FD79C47F68AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = CF053FD84E415013BDD8E85B34D33F48 /* SwiftLint */;
+			targetProxy = 5754F838A0DCD03FFC304A861F830B48 /* PBXContainerItemProxy */;
+		};
+		6CF53EFB61B84AD884370C860AF8A595 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftCSV;
-			target = 0766D04BC61B2D24B551A21AAEFB05A2 /* SwiftCSV */;
-			targetProxy = 965FE1055ED1785E9F7379F62F187A6D /* PBXContainerItemProxy */;
+			target = A0782F6A214776B02FFD12D054A1F352 /* SwiftCSV */;
+			targetProxy = B0E8464F423EFE8413588CC09B71570D /* PBXContainerItemProxy */;
+		};
+		7E255AC45EED0820F3C63EB58F98D1CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = CF053FD84E415013BDD8E85B34D33F48 /* SwiftLint */;
+			targetProxy = D5F098F065E5F089BD70DFD0DD42A246 /* PBXContainerItemProxy */;
 		};
 		90E97ED2A5230AD1DC3DC12865056F57 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftCSV;
-			target = 0766D04BC61B2D24B551A21AAEFB05A2 /* SwiftCSV */;
+			target = A0782F6A214776B02FFD12D054A1F352 /* SwiftCSV */;
 			targetProxy = EE3ACFA38A0B52FB047D464C8B2E2336 /* PBXContainerItemProxy */;
-		};
-		C87FC7F26DE27A65B4FCEA086FBF1F08 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftCSV;
-			target = 0766D04BC61B2D24B551A21AAEFB05A2 /* SwiftCSV */;
-			targetProxy = 6DAA8187A204007730C3D8B22E54CB98 /* PBXContainerItemProxy */;
 		};
 		D03C45F9CE580CD64A6A8BCA097AA5A9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-CSVReader";
-			target = 3FF1856C8F865FFC38A0542CEBF73D6E /* Pods-CSVReader */;
+			target = 93D85DCD3F543112B909625E7B45DFB2 /* Pods-CSVReader */;
 			targetProxy = 601E3759A9504479A8D44174F3CEBECC /* PBXContainerItemProxy */;
 		};
-		F66961283DDE9D4EDC9B8A370CD1A9CB /* PBXTargetDependency */ = {
+		F4E8423B93AFD72803E3F65C97A70969 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-CSVReader";
-			target = 3FF1856C8F865FFC38A0542CEBF73D6E /* Pods-CSVReader */;
-			targetProxy = AE79D6AAC6CE7A421DE9380F346C850E /* PBXContainerItemProxy */;
+			target = 93D85DCD3F543112B909625E7B45DFB2 /* Pods-CSVReader */;
+			targetProxy = 19117277B49F902BEFE9ECBD70C26C76 /* PBXContainerItemProxy */;
+		};
+		FF2AFAD86C591EC349F9D764BFE714F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftCSV;
+			target = A0782F6A214776B02FFD12D054A1F352 /* SwiftCSV */;
+			targetProxy = 420A6B2A059731E62DD54F2A1929E5FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -599,10 +660,12 @@
 			};
 			name = Release;
 		};
-		16229969E0A5FF650E17AA4D7CC3CA22 /* Debug */ = {
+		187BF6266ACEF81C64A6A064105BCE2F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2445CC976B450B5F8A4F3F16670D1DD /* SwiftCSV.xcconfig */;
+			baseConfigurationReference = 0B00F431E93E5BAED686AA465B86D9AF /* Pods-CSVReaderTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -612,27 +675,29 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftCSV/SwiftCSV-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftCSV/SwiftCSV-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-CSVReaderTests/Pods-CSVReaderTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SwiftCSV/SwiftCSV.modulemap";
-				PRODUCT_MODULE_NAME = SwiftCSV;
-				PRODUCT_NAME = SwiftCSV;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CSVReaderTests/Pods-CSVReaderTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		3C6B451F1D9DC12E89BB786412244EBC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -711,12 +776,10 @@
 			};
 			name = Debug;
 		};
-		B5099764B5430BED4E5310623D50AABE /* Debug */ = {
+		58FB1FA174D5DFAAD6B9C4E68BA2110E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E571513A1E1CD28B52BD6A528734CEEF /* Pods-CSVReaderTests.debug.xcconfig */;
+			baseConfigurationReference = 72C729F50F1898301A12D3BD60B9E31C /* SwiftCSV.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -726,32 +789,64 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CSVReaderTests/Pods-CSVReaderTests-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCSV/SwiftCSV-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCSV/SwiftCSV-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CSVReaderTests/Pods-CSVReaderTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SwiftCSV/SwiftCSV.modulemap";
+				PRODUCT_MODULE_NAME = SwiftCSV;
+				PRODUCT_NAME = SwiftCSV;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B7FFFB5826FE536AE33AF41CBF19713D /* Release */ = {
+		6A449B419AC8F13ECDDCD572D39005B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2445CC976B450B5F8A4F3F16670D1DD /* SwiftCSV.xcconfig */;
+			baseConfigurationReference = 3BFD665B6E866853B2751DEF50EC47B4 /* SwiftLint.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C015FCE023AF9768641AF7B5323D70B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BFD665B6E866853B2751DEF50EC47B4 /* SwiftLint.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74BEE5E475CD69146BCBF9F03AC69974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72C729F50F1898301A12D3BD60B9E31C /* SwiftCSV.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -785,7 +880,7 @@
 			};
 			name = Release;
 		};
-		BAE074510E095A2F4D1A7B88146E676A /* Release */ = {
+		796A7C7AE508DE79F32F4C20F2B70629 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 952EA8920CADE9ABA5C7D56645629FFD /* Pods-CSVReader.release.xcconfig */;
 			buildSettings = {
@@ -824,7 +919,7 @@
 			};
 			name = Release;
 		};
-		C6ACA27727BDBB1E2D86483F9FEF56F4 /* Debug */ = {
+		8B7CE6CDC4E3D4EDFA082CE5EA83B4EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 508643692E399BCF6A2EEF03F3065A7F /* Pods-CSVReader.debug.xcconfig */;
 			buildSettings = {
@@ -926,9 +1021,9 @@
 			};
 			name = Debug;
 		};
-		F3629B4A005106531BAD41E964457838 /* Release */ = {
+		FB70455CA4A2360A9E744A953993B7F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B00F431E93E5BAED686AA465B86D9AF /* Pods-CSVReaderTests.release.xcconfig */;
+			baseConfigurationReference = E571513A1E1CD28B52BD6A528734CEEF /* Pods-CSVReaderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -959,20 +1054,28 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		36600AF05924AC5E535A00A4002C8921 /* Build configuration list for PBXNativeTarget "Pods-CSVReader" */ = {
+		1915E94E19A0BDC9809FE018C425E19E /* Build configuration list for PBXNativeTarget "SwiftCSV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C6ACA27727BDBB1E2D86483F9FEF56F4 /* Debug */,
-				BAE074510E095A2F4D1A7B88146E676A /* Release */,
+				58FB1FA174D5DFAAD6B9C4E68BA2110E /* Debug */,
+				74BEE5E475CD69146BCBF9F03AC69974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22420E4CEDEDE986487A766E914EDA40 /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C015FCE023AF9768641AF7B5323D70B /* Debug */,
+				6A449B419AC8F13ECDDCD572D39005B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -995,20 +1098,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7082A437B09DF539000D4019DB9426D4 /* Build configuration list for PBXNativeTarget "SwiftCSV" */ = {
+		4902A75A1368997B7BBD2E5CF36D79A2 /* Build configuration list for PBXNativeTarget "Pods-CSVReaderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16229969E0A5FF650E17AA4D7CC3CA22 /* Debug */,
-				B7FFFB5826FE536AE33AF41CBF19713D /* Release */,
+				FB70455CA4A2360A9E744A953993B7F3 /* Debug */,
+				187BF6266ACEF81C64A6A064105BCE2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9F69A6465FAF34789C152B09315ACEB /* Build configuration list for PBXNativeTarget "Pods-CSVReaderTests" */ = {
+		82B59E9834F56FD7F51392FFC27B0624 /* Build configuration list for PBXNativeTarget "Pods-CSVReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5099764B5430BED4E5310623D50AABE /* Debug */,
-				F3629B4A005106531BAD41E964457838 /* Release */,
+				8B7CE6CDC4E3D4EDFA082CE5EA83B4EB /* Debug */,
+				796A7C7AE508DE79F32F4C20F2B70629 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

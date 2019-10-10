@@ -1,0 +1,12 @@
+excluded: 
+  - Pods
+  - Carthage
+  - Externals
+  - Generated
+  - fastlane
+  - scripts
+  - build
+  - vendor
+
+disabled_rules:
+  - identifier_name

@@ -7,11 +7,13 @@ target 'CSVReader' do
 
   # Pods for CSVReader
   pod "SwiftCSV"
+  pod "SwiftLint"
 
   target 'CSVReaderTests' do
     inherit! :search_paths
     # Pods for testing
   pod "SwiftCSV"
+  pod "SwiftLint"
   end
 
   target 'CSVReaderUITests' do

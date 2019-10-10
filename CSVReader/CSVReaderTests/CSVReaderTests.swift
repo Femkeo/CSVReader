@@ -10,36 +10,34 @@ import XCTest
 @testable import CSVReader
 
 class CSVReaderTests: XCTestCase {
-    
+
     let reader = CSVReader()
 
     override func setUp() {
-        
     }
 
     override func tearDown() {
-        
     }
-    
-    func testIfNoCSVFileReturnsNil(){
+
+    func testIfNoCSVFileReturnsNil() {
         let result = reader.findCSVFile(name: "Fake File")
         XCTAssertNil(result, "The CSV file does not return nil when never found")
     }
-    
-    func testIfCSVFileReturnsPath(){
+
+    func testIfCSVFileReturnsPath() {
         let result = reader.findCSVFile(name: "issues")
         XCTAssertNotNil(result)
     }
-    
-    func testIfCSVFileIsReadCorrectly(){
+
+    func testIfCSVFileIsReadCorrectly() {
         //works only with provided CSV
         let path = reader.findCSVFile(name: "issues")
-        if let result = reader.readCSV(path: path ?? ""){
-            XCTAssertEqual(result.first?["First name"] ?? "", "Theo", "The first name that was found is not the first name in the document")
-        }else{
-            XCTFail()
+        if let result = reader.readCSV(path: path ?? "") {
+            XCTAssertEqual(result.first?["First name"] ?? "",
+                           "Theo",
+                           "The first name that was found is not the first name in the document")
+        } else {
+            XCTFail("The result when reading the CSV is nil")
         }
     }
-    
-
 }

@@ -8,9 +8,25 @@
 
 import Foundation
 
-struct Issue{
-    var firstName: String = ""
-    var lastName: String = ""
-    var numberOfIssues: String = ""
-    var birthDay : String = ""
+struct Issue {
+    var firstName: String? = ""
+    var lastName: String? = ""
+    var numberOfIssues: String? = ""
+    var birthDay: Date?
+
+    init(firstname: String?, lastname: String?, numberOfIssues: String?, birthDayText: String) {
+        self.firstName = firstname ?? "-"
+        self.lastName = lastname ?? "-"
+        self.numberOfIssues = numberOfIssues ?? "-"
+        self.birthDay = transformBirthday(birthdayInText: birthDayText)
+    }
+
+    func transformBirthday(birthdayInText: String) -> Date? {
+        if birthdayInText.count > 0 {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            return dateFormatter.date(from: birthdayInText)
+        }
+        return nil
+    }
 }

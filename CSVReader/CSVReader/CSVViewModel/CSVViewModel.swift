@@ -8,13 +8,13 @@
 
 import Foundation
 
-class CSVViewModel{
+class CSVViewModel {
     let reader = CSVReader()
     let issues = [Issue]()
-    
-    func retrieveIssues(){
-        if let csvFilePath = reader.findCSVFile(name: "issues"){
-            reader.readCSV(path: csvFilePath)
+
+    func retrieveIssues() {
+        if let csvFilePath = reader.findCSVFile(name: "issues") {
+            let csvRows = reader.readCSV(path: csvFilePath)
         }
     }
 }
