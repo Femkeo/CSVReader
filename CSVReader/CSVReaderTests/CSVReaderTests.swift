@@ -19,7 +19,8 @@ class CSVReaderTests: XCTestCase {
     override func tearDown() {
     }
 
-    func testIfNoCSVFileReturnsNil() {
+    //testItShouldReturnNilWhenFileNotFoundOnFindCSVFile
+    func testIfCSVFileIsNotFoundThenNilIsReturned() {
         let result = reader.findCSVFile(name: "Fake File")
         XCTAssertNil(result, "The CSV file does not return nil when never found")
     }

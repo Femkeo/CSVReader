@@ -23,7 +23,6 @@ class IssueTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         fillInputViews()
-        self.frame.size.height = 100
     }
 
     func fillInputViews() {

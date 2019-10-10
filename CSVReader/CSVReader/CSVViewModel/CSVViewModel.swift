@@ -30,13 +30,13 @@ class CSVViewModel {
     }
 
     func retrieveIssues() {
-        if let csvFilePath = reader.findCSVFile(name: "issues") {
+        if let csvFilePath = reader.findCSVFile(name: Constants.csvFileName) {
             if let csvRows = reader.readCSV(path: csvFilePath) {
                 for row in csvRows {
-                    let newIssue = Issue(firstname: row["First name"],
-                                         lastname: row["Sur name"],
-                                         numberOfIssues: row["Issue count"],
-                                         birthDayText: row["Date of birth"])
+                    let newIssue = Issue(firstname: row[Constants.firstNameKey],
+                                         lastname: row[Constants.lastNameKey],
+                                         numberOfIssues: row[Constants.NumberOfIssuesKey],
+                                         birthDayText: row[Constants.birthDayKey])
                     DispatchQueue.main.async { [weak self] in
                         self?.issues.append(newIssue)
                     }

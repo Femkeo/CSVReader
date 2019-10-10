@@ -12,7 +12,7 @@ struct Issue {
     var firstName: String? = ""
     var lastName: String? = ""
     var numberOfIssues: String? = ""
-    var birthDay: Date?
+    var birthDay: String?
 
     init(firstname: String?, lastname: String?, numberOfIssues: String?, birthDayText: String?) {
         self.firstName = firstname ?? "-"
@@ -21,12 +21,21 @@ struct Issue {
         self.birthDay = transformBirthday(birthdayInText: birthDayText)
     }
 
-    func transformBirthday(birthdayInText: String?) -> Date? {
+    func transformBirthday(birthdayInText: String?) -> String? {
         if let birthDay = birthdayInText, birthDay.count > 0 {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            return dateFormatter.date(from: birthDay)
+            let dateFormatter = getInitialDateFormatter()
+            if let birthDate = dateFormatter.date(from: birthDay) {
+                dateFormatter.dateFormat = "dd-MM-yyyy"
+                return dateFormatter.string(from: birthDate)
+            }
         }
         return nil
+    }
+    
+    func getInitialDateFormatter() -> DateFormatter{
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        return dateFormatter
     }
 }
