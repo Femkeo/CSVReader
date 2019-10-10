@@ -13,6 +13,7 @@ class IssueTableViewCell: UITableViewCell {
     @IBOutlet weak var issuesAmountLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var birthdayLabel: UILabel!
+    @IBOutlet weak var issueBox: UIView!
 
     var issue: Issue? {
         didSet {
@@ -31,8 +32,11 @@ class IssueTableViewCell: UITableViewCell {
         }
         if let amount = issue?.numberOfIssues {
             issuesAmountLabel?.text = amount
+            if amount == "0"{
+                issueBox.backgroundColor = UIColor.green
+            }
         }
-        if let birthday = issue?.birthDay {
+        if let birthday = issue?.birthDay, birthday.count > 0 {
             birthdayLabel?.text = "\(birthday)"
         }
     }
