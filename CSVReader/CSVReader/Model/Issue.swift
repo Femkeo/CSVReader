@@ -9,19 +9,19 @@
 import Foundation
 
 struct Issue: Equatable {
-    var firstName: String? = ""
-    var lastName: String? = ""
-    var numberOfIssues: String? = ""
+    var firstName: String?
+    var lastName: String?
+    var numberOfIssues: String?
     var birthDay: String?
 
     init(firstname: String?, lastname: String?, numberOfIssues: String?, birthDayText: String?) {
-        self.firstName = firstname ?? ""
-        self.lastName = lastname ?? ""
-        self.numberOfIssues = numberOfIssues ?? ""
+        self.firstName = firstname
+        self.lastName = lastname
+        self.numberOfIssues = numberOfIssues
         self.birthDay = transformBirthday(birthdayInText: birthDayText)
     }
 
-    func transformBirthday(birthdayInText: String?) -> String {
+    func transformBirthday(birthdayInText: String?) -> String? {
         if let birthDay = birthdayInText, birthDay.count > 0 {
             let dateFormatter = setInitialDateFormatter()
             if let birthDate = dateFormatter.date(from: birthDay) {
@@ -29,7 +29,7 @@ struct Issue: Equatable {
                 return dateFormatter.string(from: birthDate)
             }
         }
-        return ""
+        return nil
     }
 
     func setInitialDateFormatter() -> DateFormatter {
