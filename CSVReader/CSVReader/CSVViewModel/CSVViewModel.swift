@@ -9,17 +9,18 @@
 import Foundation
 
 protocol HandleIssuesUpdate: class {
-    func reloadSinceIssuesIsUpdated()
+    func reloadSinceIssuesIsUpdated(issues: [Issue])
     func showErrorAlert(errorText: String)
 }
 
 class CSVViewModel {
     let reader = CSVReader()
-    var dispatchQueue = DispatchQueue.main
+    var mainDispatchQueue = DispatchQueue.main
+    var backgroundDispatchQueue = DispatchQueue.global(qos: .default)
     var issues = [Issue]() {
         didSet {
-            self.dispatchQueue.async {
-                self.delegate?.reloadSinceIssuesIsUpdated()
+            self.mainDispatchQueue.async {
+                self.delegate?.reloadSinceIssuesIsUpdated(issues: self.issues)
             }
         }
     }
@@ -27,44 +28,48 @@ class CSVViewModel {
 
     weak var delegate: HandleIssuesUpdate?
 
-    init(delegate: HandleIssuesUpdate?, dispatchQueue: DispatchQueue?) {
-        self.delegate = delegate
-        self.dispatchQueue = dispatchQueue ?? DispatchQueue.main
+    init() {
         self.retrieveIssues()
     }
 
     func retrieveIssues() {
-        if let csvFilePath = reader.findCSVFile(name: Constants.csvFileName) {
-            if let csvRows = reader.readCSV(path: csvFilePath) {
-                for row in csvRows {
-                    let newIssue = Issue(firstname: row[Constants.firstNameKey],
-                                         lastname: row[Constants.lastNameKey],
-                                         numberOfIssues: row[Constants.numberOfIssuesKey],
-                                         birthDayText: row[Constants.birthDayKey])
-                    dispatchQueue.async { [weak self] in
-                        if let self = self {
-                            if self.newIssueIsNotEmpty(issue: newIssue) {
-                                self.issues.append(newIssue)
-                            } else if self.noErrorHasOccuredYet {
-                                self.delegate?.showErrorAlert(errorText:
-                                    Constants.emptyIssueErrorMessage)
-                                self.noErrorHasOccuredYet = false
-                            }
-                        }
-                    }
-                    print(row)
+        backgroundDispatchQueue.async { [weak self] in
+            guard let self = self else { return }
+            guard let csvFilePath = self.reader.findCSVFile(name: Constants.csvFileName) else { return }
+            guard let csvRows = self.reader.readCSV(path: csvFilePath) else { return }
+            for row in csvRows {
+                if let newIssue = self.getIssueIfNotEmpty(csvRow: row) {
+                    self.issues.append(newIssue)
+                } else {
+                    self.handleErrorMessage()
                 }
             }
         }
     }
 
-    func newIssueIsNotEmpty(issue: Issue) -> Bool {
-        let nilIssue = Issue(firstname: nil, lastname: nil, numberOfIssues: nil, birthDayText: nil)
-        let safetyIssue = Issue(firstname: "-", lastname: "-", numberOfIssues: "-", birthDayText: "")
-        let emptyIssue = Issue(firstname: "", lastname: "", numberOfIssues: "", birthDayText: "")
-        if issue == nilIssue || issue == emptyIssue || issue == safetyIssue {
-            return false
+    func getIssueIfNotEmpty(csvRow: [String: String]) -> Issue? {
+        let newIssue = Issue(firstname: csvRow[Constants.firstNameKey],
+                             lastname: csvRow[Constants.lastNameKey],
+                             numberOfIssues: csvRow[Constants.numberOfIssuesKey],
+                             birthDayText: csvRow[Constants.birthDayKey])
+        if self.newIssueIsNotEmpty(issue: newIssue) {
+            return newIssue
         }
-        return true
+        return nil
+    }
+
+    func handleErrorMessage() {
+        if self.noErrorHasOccuredYet {
+            mainDispatchQueue.sync { [weak self] in
+                self?.delegate?.showErrorAlert(errorText:
+                    Constants.emptyIssueErrorMessage)
+                self?.noErrorHasOccuredYet = false
+            }
+        }
+    }
+
+    func newIssueIsNotEmpty(issue: Issue) -> Bool {
+        let emptyIssue = Issue(firstname: "", lastname: "", numberOfIssues: "", birthDayText: "")
+        return issue != emptyIssue
     }
 }

@@ -15,9 +15,9 @@ struct Issue: Equatable {
     var birthDay: String?
 
     init(firstname: String?, lastname: String?, numberOfIssues: String?, birthDayText: String?) {
-        self.firstName = firstname ?? "-"
-        self.lastName = lastname ?? "-"
-        self.numberOfIssues = numberOfIssues ?? "-"
+        self.firstName = firstname ?? ""
+        self.lastName = lastname ?? ""
+        self.numberOfIssues = numberOfIssues ?? ""
         self.birthDay = transformBirthday(birthdayInText: birthDayText)
     }
 

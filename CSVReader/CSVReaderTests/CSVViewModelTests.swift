@@ -10,9 +10,12 @@ import XCTest
 @testable import CSVReader
 
 class CSVViewModelTests: XCTestCase {
-    let viewModel = CSVViewModel(delegate: nil, dispatchQueue: DispatchQueue.global())
+    var viewModel: CSVViewModel?
+    let viewController = CSVResultMockTableViewController()
 
     override func setUp() {
+        viewModel = CSVViewModel()
+        viewModel?.delegate = viewController
     }
 
     override func tearDown() {
@@ -20,10 +23,27 @@ class CSVViewModelTests: XCTestCase {
 
     //works only with provided csv
     func testIfArrayHasNewElementWhenRequestingCSV() {
-        let amountOfElements = viewModel.issues.count
-        viewModel.retrieveIssues()
+        if let viewModel = viewModel {
+            let amountOfElements = viewModel.issues.count
+            let issueUpdateExpectation = expectation(description:
+                                    "ViewController received a number of issues, higher then 0")
+            viewModel.retrieveIssues()
+            viewController.didRecieveUpdateRequestClosure = { issues in
+                if issues.count > amountOfElements {
+                    //Removing the delegate, since expectation is already fulfilled
+                    viewModel.delegate = nil
+                    issueUpdateExpectation.fulfill()
+                }
+            }
+            wait(for: [issueUpdateExpectation], timeout: 10)
+        }
+    }
 
-        XCTAssertLessThan(amountOfElements, viewModel.issues.count, "\(amountOfElements), !< \(viewModel.issues.count)")
-
+    func testErrorMessageHandling() {
+        guard let viewModel = viewModel else { return }
+        viewModel.delegate = viewController
+        viewModel.mainDispatchQueue = DispatchQueue.global(qos: .background)
+        viewModel.handleErrorMessage()
+        XCTAssertFalse(viewModel.noErrorHasOccuredYet)
     }
 }

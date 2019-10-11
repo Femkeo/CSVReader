@@ -9,7 +9,7 @@
 import Foundation
 import SwiftCSV
 
-class CSVReader {
+struct CSVReader {
 
     func findCSVFile(name: String) -> String? {
         guard let csvPath = Bundle.main.path(forResource: name, ofType: "csv") else {

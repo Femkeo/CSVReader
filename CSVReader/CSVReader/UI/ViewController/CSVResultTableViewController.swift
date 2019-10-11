@@ -10,11 +10,12 @@ import UIKit
 
 class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
 
-    var viewModel: CSVViewModel?
+    var viewModel = CSVViewModel()
+    var issues = [Issue]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = CSVViewModel(delegate: self, dispatchQueue: nil)
+        viewModel.delegate = self
         registerIssueCell()
         tableView.tableFooterView = UIView()
     }
@@ -25,7 +26,7 @@ class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if IssuesListIsNotEmpty() {
-            return viewModel?.issues.count ?? 0
+            return issues.count
         } else {
             return 1
         }
@@ -34,7 +35,7 @@ class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if IssuesListIsNotEmpty() {
             let cell = tableView.dequeueReusableCell(withIdentifier: "IssueCell", for: indexPath) as? IssueTableViewCell
-            cell?.issue = viewModel?.issues[indexPath.row]
+            cell?.issue = issues[indexPath.row]
             return cell ?? UITableViewCell()
         } else {
             let cell = UITableViewCell()
@@ -50,19 +51,24 @@ class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
     }
 
     func IssuesListIsNotEmpty() -> Bool {
-        if (viewModel?.issues.count ?? 0) > 0 {
+        if issues.count > 0 {
             return true
         }
         return false
     }
 
-    func reloadSinceIssuesIsUpdated() {
+    func reloadSinceIssuesIsUpdated(issues: [Issue]) {
+        self.issues = issues
         tableView.reloadData()
     }
 
     func showErrorAlert(errorText: String) {
-        let errorAlert = UIAlertController(title: Constants.errorMessageTitle, message: errorText, preferredStyle: .alert)
-        errorAlert.addAction(UIAlertAction(title: Constants.okbuttonTitle, style: UIAlertAction.Style.default, handler: nil))
+        let errorAlert = UIAlertController(title: Constants.errorMessageTitle,
+                                           message: errorText,
+                                           preferredStyle: .alert)
+        errorAlert.addAction(UIAlertAction(title: Constants.okbuttonTitle,
+                                           style: UIAlertAction.Style.default,
+                                           handler: nil))
         self.present(errorAlert, animated: true, completion: nil)
      }
 
