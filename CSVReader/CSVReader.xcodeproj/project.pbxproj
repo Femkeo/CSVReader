@@ -13,7 +13,6 @@
 		2000BDA9234E285100850A6B /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2000BDA7234E285100850A6B /* IssueTableViewCell.swift */; };
 		2000BDAA234E285100850A6B /* IssueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2000BDA8234E285100850A6B /* IssueTableViewCell.xib */; };
 		2005AAEA234DD77300679AF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AAE9234DD77300679AF2 /* AppDelegate.swift */; };
-		2005AAEC234DD77300679AF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AAEB234DD77300679AF2 /* SceneDelegate.swift */; };
 		2005AAF1234DD77300679AF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AAEF234DD77300679AF2 /* Main.storyboard */; };
 		2005AAF3234DD77500679AF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2005AAF2234DD77500679AF2 /* Assets.xcassets */; };
 		2005AAF6234DD77500679AF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AAF4234DD77500679AF2 /* LaunchScreen.storyboard */; };
@@ -59,7 +58,6 @@
 		2000BDA8234E285100850A6B /* IssueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueTableViewCell.xib; sourceTree = "<group>"; };
 		2005AAE6234DD77300679AF2 /* CSVReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSVReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2005AAE9234DD77300679AF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2005AAEB234DD77300679AF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2005AAF0234DD77300679AF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2005AAF2234DD77500679AF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2005AAF5234DD77500679AF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 			children = (
 				2005AB22234DDF0700679AF2 /* CSVFile */,
 				2005AAE9234DD77300679AF2 /* AppDelegate.swift */,
-				2005AAEB234DD77300679AF2 /* SceneDelegate.swift */,
 				2005AAF2234DD77500679AF2 /* Assets.xcassets */,
 				2005AAF7234DD77500679AF2 /* Info.plist */,
 			);
@@ -568,7 +565,6 @@
 				2005AB1A234DD7A500679AF2 /* CSVResultTableViewController.swift in Sources */,
 				2005AB21234DDC3D00679AF2 /* CSVReader.swift in Sources */,
 				2005AAEA234DD77300679AF2 /* AppDelegate.swift in Sources */,
-				2005AAEC234DD77300679AF2 /* SceneDelegate.swift in Sources */,
 				2000BDA9234E285100850A6B /* IssueTableViewCell.swift in Sources */,
 				2046BF2E234F35080023CD25 /* Constants.swift in Sources */,
 			);
@@ -681,7 +677,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -735,7 +731,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
