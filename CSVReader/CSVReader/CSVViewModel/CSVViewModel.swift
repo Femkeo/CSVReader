@@ -22,17 +22,58 @@ class CSVViewModel {
             self.mainDispatchQueue.async {
                 self.delegate?.reloadSinceIssuesIsUpdated(issues: self.issues)
             }
+            self.backgroundDispatchQueue.async {
+                self.safeLocalUsers(issues: self.issues)
+            }
         }
     }
     var noErrorHasOccuredYet = true
+    let userDefaults = UserDefaults.standard
 
     weak var delegate: HandleIssuesUpdate?
 
     init() {
-        self.retrieveIssues()
+        if userAlreadyInMomory() {
+            addLocalUsers()
+        } else {
+            retrieveIssues()
+        }
+    }
+
+    func userAlreadyInMomory() -> Bool {
+        return userDefaults.data(forKey: Constants.localIssues) != nil
+    }
+
+    func addLocalUsers() {
+        issues = retrieveLocalUsers()
+    }
+
+    func retrieveLocalUsers() -> [Issue] {
+        do {
+            guard let savedIssues = userDefaults.data(forKey: Constants.localIssues) else { return [Issue]() }
+            if let issueData = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedIssues) {
+                let localIssues = try JSONDecoder().decode([Issue].self, from: issueData as? Data ?? Data())
+                return localIssues
+            }
+        } catch let error {
+            print("Could not retrieve local issues because of error: \(error)")
+        }
+        return [Issue]()
+    }
+
+    func safeLocalUsers(issues: [Issue]) {
+        do {
+            let newIssues = try JSONEncoder().encode(issues)
+            let data: Data? = try NSKeyedArchiver.archivedData(withRootObject: newIssues, requiringSecureCoding: false)
+            userDefaults.set(data, forKey: Constants.localIssues)
+            userDefaults.synchronize()
+        } catch let error {
+            print("Could not safe local issues because of error: \(error)")
+        }
     }
 
     func retrieveIssues() {
+        issues = [Issue]()
         backgroundDispatchQueue.async { [weak self] in
             guard let self = self else { return }
             guard let csvFilePath = self.reader.findCSVFile(name: Constants.csvFileName) else { return }

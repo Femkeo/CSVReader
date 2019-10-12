@@ -17,6 +17,9 @@ class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
         super.viewDidLoad()
         viewModel.delegate = self
         registerIssueCell()
+        tableView.refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refreshIssuesList), for: .valueChanged)
+
         tableView.tableFooterView = UIView()
     }
 
@@ -50,6 +53,10 @@ class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    @objc func refreshIssuesList() {
+        viewModel.retrieveIssues()
+    }
+
     func IssuesListIsNotEmpty() -> Bool {
         if issues.count > 0 {
             return true
@@ -60,6 +67,9 @@ class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
     func reloadSinceIssuesIsUpdated(issues: [Issue]) {
         self.issues = issues
         tableView.reloadData()
+        if tableView.refreshControl?.isRefreshing == true {
+            tableView.refreshControl?.endRefreshing()
+        }
     }
 
     func showErrorAlert(errorText: String) {

@@ -10,6 +10,7 @@ import Foundation
 
 struct Constants {
     static let csvFileName = "issues"
+    static let localIssues = "locallySavedIssues"
 
     static let firstNameKey = ("First name").trimmingCharacters(in: .whitespacesAndNewlines)
     static let lastNameKey = ("Sur name").trimmingCharacters(in: .whitespacesAndNewlines)

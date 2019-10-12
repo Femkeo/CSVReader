@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Issue: Equatable {
+struct Issue: Codable, Equatable {
     var firstName: String?
     var lastName: String?
     var numberOfIssues: String?
