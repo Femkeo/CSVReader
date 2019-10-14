@@ -16,6 +16,6 @@ The deployment target for this application is iOS 12.4
 To ensure clean code, this application makes use of the third party library called SwiftLint, 
 • https://github.com/realm/SwiftLint
 
-This application is build using the MVVM pattern to ensure seperation of concerns.
+This application is build using the MVP pattern to ensure seperation of concerns.
 This app has been provided with unit tests to ensure quality.
 There are still some comments and print statements in the application. Since this is a small example application, I found it sufficiant. Normally this would be removed and replaced with correct logging. 

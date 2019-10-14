@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B35E4E459152121BD0130E0 /* Pods_CSVReaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7041049511A03C3CD7890FE5 /* Pods_CSVReaderTests.framework */; };
-		2000BDA3234E145600850A6B /* CSVViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2000BDA2234E145600850A6B /* CSVViewModel.swift */; };
+		2000BDA3234E145600850A6B /* CSVViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2000BDA2234E145600850A6B /* CSVViewPresenter.swift */; };
 		2000BDA5234E1A1000850A6B /* CSVReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AB20234DDC3D00679AF2 /* CSVReader.swift */; };
 		2000BDA9234E285100850A6B /* IssueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2000BDA7234E285100850A6B /* IssueTableViewCell.swift */; };
 		2000BDAA234E285100850A6B /* IssueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2000BDA8234E285100850A6B /* IssueTableViewCell.xib */; };
@@ -23,9 +23,9 @@
 		2005AB26234DE07D00679AF2 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AB25234DE07D00679AF2 /* Issue.swift */; };
 		2046BF2E234F35080023CD25 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046BF2D234F35080023CD25 /* Constants.swift */; };
 		2046BF3D23509BD40023CD25 /* CSVResultMockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046BF3C23509BD40023CD25 /* CSVResultMockTableViewController.swift */; };
-		2046BF4123509FC30023CD25 /* CSVViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046BF32234F4BE00023CD25 /* CSVViewModelTests.swift */; };
+		2046BF4123509FC30023CD25 /* CSVViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046BF32234F4BE00023CD25 /* CSVViewPresenterTests.swift */; };
 		2046BF442350A0720023CD25 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005AB25234DE07D00679AF2 /* Issue.swift */; };
-		2046BF452350A0A50023CD25 /* CSVViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2000BDA2234E145600850A6B /* CSVViewModel.swift */; };
+		2046BF452350A0A50023CD25 /* CSVViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2000BDA2234E145600850A6B /* CSVViewPresenter.swift */; };
 		2046BF462350A0AE0023CD25 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046BF2D234F35080023CD25 /* Constants.swift */; };
 		2046BF482350CECE0023CD25 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046BF472350CECE0023CD25 /* AboutViewController.swift */; };
 		2046BF512351D78B0023CD25 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2046BF502351D78B0023CD25 /* issues.csv */; };
@@ -56,7 +56,7 @@
 		035274933696A3F736785003 /* Pods-CSVReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVReader.release.xcconfig"; path = "Target Support Files/Pods-CSVReader/Pods-CSVReader.release.xcconfig"; sourceTree = "<group>"; };
 		065A3D95074D3F1F6AF0BA08 /* Pods_CSVReaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSVReaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08552CD8F7403EB04A560FFE /* Pods-CSVReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSVReader.debug.xcconfig"; path = "Target Support Files/Pods-CSVReader/Pods-CSVReader.debug.xcconfig"; sourceTree = "<group>"; };
-		2000BDA2234E145600850A6B /* CSVViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVViewModel.swift; sourceTree = "<group>"; };
+		2000BDA2234E145600850A6B /* CSVViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVViewPresenter.swift; sourceTree = "<group>"; };
 		2000BDA7234E285100850A6B /* IssueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTableViewCell.swift; sourceTree = "<group>"; };
 		2000BDA8234E285100850A6B /* IssueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueTableViewCell.xib; sourceTree = "<group>"; };
 		2005AAE6234DD77300679AF2 /* CSVReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSVReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +75,7 @@
 		2005AB20234DDC3D00679AF2 /* CSVReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
 		2005AB25234DE07D00679AF2 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		2046BF2D234F35080023CD25 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		2046BF32234F4BE00023CD25 /* CSVViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVViewModelTests.swift; sourceTree = "<group>"; };
+		2046BF32234F4BE00023CD25 /* CSVViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVViewPresenterTests.swift; sourceTree = "<group>"; };
 		2046BF3C23509BD40023CD25 /* CSVResultMockTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVResultMockTableViewController.swift; sourceTree = "<group>"; };
 		2046BF472350CECE0023CD25 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		2046BF502351D78B0023CD25 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
@@ -116,12 +116,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2000BDA4234E145D00850A6B /* CSVViewModel */ = {
+		2000BDA4234E145D00850A6B /* CSVViewPresenter */ = {
 			isa = PBXGroup;
 			children = (
-				2000BDA2234E145600850A6B /* CSVViewModel.swift */,
+				2000BDA2234E145600850A6B /* CSVViewPresenter.swift */,
 			);
-			path = CSVViewModel;
+			path = CSVViewPresenter;
 			sourceTree = "<group>";
 		};
 		2000BDAB234E285400850A6B /* Cell */ = {
@@ -177,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				2005AB1D234DD80A00679AF2 /* UI */,
-				2000BDA4234E145D00850A6B /* CSVViewModel */,
+				2000BDA4234E145D00850A6B /* CSVViewPresenter */,
 				2005AB1C234DD80400679AF2 /* Model */,
 				2005AB27234DE08700679AF2 /* Network */,
 				2005AB1B234DD7BC00679AF2 /* Supporting Files */,
@@ -191,7 +191,7 @@
 				2046BF4D2351D6F80023CD25 /* TestCSVFile */,
 				2005AB00234DD77500679AF2 /* CSVReaderTests.swift */,
 				2046BF3C23509BD40023CD25 /* CSVResultMockTableViewController.swift */,
-				2046BF32234F4BE00023CD25 /* CSVViewModelTests.swift */,
+				2046BF32234F4BE00023CD25 /* CSVViewPresenterTests.swift */,
 				2005AB02234DD77500679AF2 /* Info.plist */,
 			);
 			path = CSVReaderTests;
@@ -578,7 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2005AB26234DE07D00679AF2 /* Issue.swift in Sources */,
-				2000BDA3234E145600850A6B /* CSVViewModel.swift in Sources */,
+				2000BDA3234E145600850A6B /* CSVViewPresenter.swift in Sources */,
 				2005AB1A234DD7A500679AF2 /* CSVResultTableViewController.swift in Sources */,
 				2005AB21234DDC3D00679AF2 /* CSVReader.swift in Sources */,
 				2005AAEA234DD77300679AF2 /* AppDelegate.swift in Sources */,
@@ -593,9 +593,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2046BF442350A0720023CD25 /* Issue.swift in Sources */,
-				2046BF452350A0A50023CD25 /* CSVViewModel.swift in Sources */,
+				2046BF452350A0A50023CD25 /* CSVViewPresenter.swift in Sources */,
 				2005AB01234DD77500679AF2 /* CSVReaderTests.swift in Sources */,
-				2046BF4123509FC30023CD25 /* CSVViewModelTests.swift in Sources */,
+				2046BF4123509FC30023CD25 /* CSVViewPresenterTests.swift in Sources */,
 				2046BF462350A0AE0023CD25 /* Constants.swift in Sources */,
 				2046BF3D23509BD40023CD25 /* CSVResultMockTableViewController.swift in Sources */,
 				2000BDA5234E1A1000850A6B /* CSVReader.swift in Sources */,

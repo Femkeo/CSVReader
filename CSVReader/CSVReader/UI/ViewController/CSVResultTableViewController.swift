@@ -10,12 +10,12 @@ import UIKit
 
 class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
 
-    var viewModel = CSVViewModel()
+    var presenter = CSVViewPresenter()
     var issues = [Issue]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
+        presenter.delegate = self
         registerIssueCell()
         tableView.refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refreshIssuesList), for: .valueChanged)
@@ -53,7 +53,7 @@ class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
     }
 
     @objc func refreshIssuesList() {
-        viewModel.retrieveIssues()
+        presenter.retrieveIssues()
     }
 
     func IssuesListIsNotEmpty() -> Bool {

@@ -1,5 +1,5 @@
 //
-//  CSVViewModelTests.swift
+//  CSVViewPresenterTests.swift
 //  CSVReaderTests
 //
 //  Created by Femke Offringa on 10/10/2019.
@@ -9,13 +9,13 @@
 import XCTest
 @testable import CSVReader
 
-class CSVViewModelTests: XCTestCase {
-    var viewModel: CSVViewModel?
+class CSVViewPresenterTests: XCTestCase {
+    var presenter: CSVViewPresenter?
     let viewController = CSVResultMockTableViewController()
 
     override func setUp() {
-        viewModel = CSVViewModel()
-        viewModel?.delegate = viewController
+        presenter = CSVViewPresenter()
+        presenter?.delegate = viewController
     }
 
     override func tearDown() {
@@ -23,15 +23,15 @@ class CSVViewModelTests: XCTestCase {
 
     //works only with provided csv
     func testIfArrayHasNewElementWhenRequestingCSV() {
-        if let viewModel = viewModel {
-            let amountOfElements = viewModel.issues.count
+        if let presenter = presenter {
+            let amountOfElements = presenter.issues.count
             let issueUpdateExpectation = expectation(description:
                                     "ViewController received a number of issues, higher then 0")
-            viewModel.retrieveIssues()
+            presenter.retrieveIssues()
             viewController.didRecieveUpdateRequestClosure = { issues in
                 if issues.count > amountOfElements {
                     //Removing the delegate, since expectation is already fulfilled
-                    viewModel.delegate = nil
+                    presenter.delegate = nil
                     issueUpdateExpectation.fulfill()
                 }
             }
@@ -40,19 +40,19 @@ class CSVViewModelTests: XCTestCase {
     }
 
     func testErrorMessageHandling() {
-        guard let viewModel = viewModel else { return }
-        viewModel.delegate = viewController
-        viewModel.mainDispatchQueue = DispatchQueue.global(qos: .background)
-        viewModel.handleErrorMessage()
-        XCTAssertFalse(viewModel.noErrorHasOccuredYet)
+        guard let presenter = presenter else { return }
+        presenter.delegate = viewController
+        presenter.mainDispatchQueue = DispatchQueue.global(qos: .background)
+        presenter.handleErrorMessage()
+        XCTAssertFalse(presenter.noErrorHasOccuredYet)
     }
 
     func testIfEmptyRowIsHandled() {
         let errorExpectation = expectation(description:
         "ViewController received message of an error")
-        viewModel?.csvName = "testIssues"
-        viewModel?.delegate = viewController
-        viewModel?.retrieveIssues()
+        presenter?.csvName = "testIssues"
+        presenter?.delegate = viewController
+        presenter?.retrieveIssues()
         viewController.didRecieveErrorFeedbackRequestClosure = {
             errorExpectation.fulfill()
         }

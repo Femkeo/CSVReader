@@ -1,5 +1,5 @@
 //
-//  CSVViewModel.swift
+//  CSVViewPresenter.swift
 //  CSVReader
 //
 //  Created by Femke Offringa on 09/10/2019.
@@ -13,7 +13,7 @@ protocol HandleIssuesUpdate: class {
     func showErrorAlert(errorText: String)
 }
 
-class CSVViewModel {
+class CSVViewPresenter {
     let reader = CSVReader()
     var mainDispatchQueue = DispatchQueue.main
     var backgroundDispatchQueue = DispatchQueue.global(qos: .default)
