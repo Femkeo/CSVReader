@@ -46,4 +46,17 @@ class CSVViewModelTests: XCTestCase {
         viewModel.handleErrorMessage()
         XCTAssertFalse(viewModel.noErrorHasOccuredYet)
     }
+
+    func testIfEmptyRowIsHandled() {
+        let errorExpectation = expectation(description:
+        "ViewController received message of an error")
+        viewModel?.csvName = "testIssues"
+        viewModel?.delegate = viewController
+        viewModel?.retrieveIssues()
+        viewController.didRecieveErrorFeedbackRequestClosure = {
+            errorExpectation.fulfill()
+        }
+        wait(for: [errorExpectation], timeout: 10)
+
+     }
 }

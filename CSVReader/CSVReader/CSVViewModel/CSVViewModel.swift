@@ -29,6 +29,7 @@ class CSVViewModel {
     }
     var noErrorHasOccuredYet = true
     let userDefaults = UserDefaults.standard
+    var csvName = Constants.csvFileName
 
     weak var delegate: HandleIssuesUpdate?
 
@@ -77,7 +78,7 @@ class CSVViewModel {
         issues = [Issue]()
         backgroundDispatchQueue.async { [weak self] in
             guard let self = self else { return }
-            guard let csvFilePath = self.reader.findCSVFile(name: Constants.csvFileName) else { return }
+            guard let csvFilePath = self.reader.findCSVFile(name: self.csvName) else { return }
             guard let csvRows = self.reader.readCSV(path: csvFilePath) else { return }
             for row in csvRows {
                 if let newIssue = self.getIssueIfNotEmpty(csvRow: row) {
