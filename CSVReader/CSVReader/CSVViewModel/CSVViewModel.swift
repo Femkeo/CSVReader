@@ -73,6 +73,7 @@ class CSVViewModel {
     }
 
     func retrieveIssues() {
+        noErrorHasOccuredYet = true
         issues = [Issue]()
         backgroundDispatchQueue.async { [weak self] in
             guard let self = self else { return }

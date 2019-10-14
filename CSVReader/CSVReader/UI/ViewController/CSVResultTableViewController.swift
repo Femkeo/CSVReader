@@ -19,7 +19,6 @@ class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
         registerIssueCell()
         tableView.refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refreshIssuesList), for: .valueChanged)
-
         tableView.tableFooterView = UIView()
     }
 
@@ -67,24 +66,30 @@ class CSVResultTableViewController: UITableViewController, HandleIssuesUpdate {
     func reloadSinceIssuesIsUpdated(issues: [Issue]) {
         self.issues = issues
         tableView.reloadData()
-        if tableView.refreshControl?.isRefreshing == true {
-            tableView.refreshControl?.endRefreshing()
-        }
+        stopIfStillReloading()
     }
 
     func showErrorAlert(errorText: String) {
         let errorAlert = UIAlertController(title: Constants.errorMessageTitle,
                                            message: errorText,
                                            preferredStyle: .alert)
-        errorAlert.addAction(UIAlertAction(title: Constants.okbuttonTitle,
-                                           style: UIAlertAction.Style.default,
-                                           handler: nil))
-        self.present(errorAlert, animated: true, completion: nil)
-     }
+        errorAlert.addAction(UIAlertAction(title: "OK",
+                                           style: UIAlertAction.Style.default))
+        self.present(errorAlert, animated: true) {
+            self.stopIfStillReloading()
+        }
+    }
 
     func registerIssueCell() {
         let nib = UINib(nibName: "IssueTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "IssueCell")
     }
 
+    func stopIfStillReloading() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            if self.tableView.refreshControl?.isRefreshing == true {
+                self.tableView.refreshControl?.endRefreshing()
+            }
+        }
+    }
 }
